@@ -1,0 +1,27 @@
+
+<div class="container">
+  <div class="heading border-bottom d-flex">
+    <h1 class="mb-4"><%= @article.title %></h1>
+    <h3 class="mx-3 my-1">
+      <button>
+        <%= link_to edit_article_path  do %>
+          <i class="fa-regular fa-pen-to-square"></i>
+        <% end %>
+      </button>
+
+      <button>
+        <%= link_to article_path(@article), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+          <i class="fa-solid fa-trash"></i>
+        <% end %>
+      </button>
+
+    </h3>
+  </div>
+
+  <br>
+  <%= @article.content %>
+
+
+
+
+</div>

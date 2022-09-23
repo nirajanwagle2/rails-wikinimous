@@ -1,0 +1,14 @@
+
+
+<div class="container">
+
+  <% @articles.each do |article| %>
+
+    <h3><%= link_to article.title, article_path(article) %></h3>
+
+    <p><%= article.content.split.first(20).join(" ") %></p>
+  <% end %>
+
+
+
+</div>
